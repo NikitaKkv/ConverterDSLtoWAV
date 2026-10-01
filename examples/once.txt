@@ -1,0 +1,247 @@
+#
+#   ,d88b.d88b,    
+#   88888888888    Music:       Once Upon A Time
+#   `Y8888888Y'    Composer:    Toby Fox
+#     `Y888Y'
+#       `Y'
+#
+
+bpm 131
+
+instrument noise sampler
+    sample=./samples/noise.wav
+    root=C5
+    effect gain gain=0.5
+end
+
+instrument sq12 square
+    duty=12
+    attack=0.01
+    release=0.1
+    effect echo delay=0.229 decay=0.2
+    effect gain gain=0.1
+end
+
+instrument sq25 square
+    duty=25
+    attack=0.01
+    release=0.1
+    effect gain gain=0.1
+end
+
+instrument sq50 square
+    duty=50
+    attack=0.01
+    release=0.1
+    effect gain gain=0.1
+end
+
+instrument bass triangle
+    attack=0.1
+    release=0.1
+    effect gain gain=0.1
+end
+
+pattern intro_bass resolution 1
+    00 bass F4  4 50
+    04 bass A4  4 50
+    08 bass G#4 4 50
+    12 bass G4  4 50
+    16 bass F4  4 50
+    20 bass A4  4 50
+    24 bass G#4 4 50
+    28 bass G4  3 50
+end
+
+pattern intro resolution 1
+    00 sq25 C5  2 50
+    02 sq25 C6  2 50
+    04 sq25 G5  2 50
+    08 sq25 F5  2 50
+    10 sq25 C6  2 50
+    12 sq25 C5  2 50
+    16 sq25 C5  2 50
+    18 sq25 F5  2 50
+    20 sq25 C6  2 50
+    22 sq25 D6  2 50
+    24 sq25 C6  2 50
+    26 sq25 G5  2 50
+    28 sq25 F5  2 50
+end
+
+pattern melody resolution 4
+    126 sq25 A#4 1 50
+    127 sq25 B4 1 50
+    128 sq25 C5 2 50
+    136 sq25 C6 2 50
+    140 sq25 A5 2 50
+    144 sq25 G5 2 50
+    148 sq25 F5 4 50
+    152 sq25 E5 4 50
+    156 sq25 F5 4 50
+    160 sq25 G5 6 50
+    168 sq25 E6 6 50
+    174 sq25 D#6 1 50
+    175 sq25 D6 1 50
+    176 sq25 C6 12 50
+    192 sq25 D5 4 50
+    200 sq25 C6 2 50
+    204 sq25 A5 2 50
+    208 sq25 G5 2 50
+    212 sq25 F5 4 50
+    216 sq25 G5 4 50
+    220 sq25 A5 4 50
+    224 sq25 E5 4 50
+    232 sq25 G5 4 50
+    240 sq25 G5 4 50
+    244 sq25 F5 4 50
+    248 sq25 E5 4 50
+    252 sq25 F5 4 50
+    256 sq25 C5 4 50
+    264 sq25 C6 2 50
+    268 sq25 A5 2 50
+    272 sq25 G5 2 50
+    276 sq25 F5 4 50
+    280 sq25 E5 4 50
+    284 sq25 F5 4 50
+    288 sq25 G5 6 50
+    296 sq25 E6 6 50
+    302 sq25 D#6 1 50
+    303 sq25 D6 1 50
+    304 sq25 C6 12 50
+    320 sq25 D5 4 50
+    328 sq25 C6 2 50
+    332 sq25 A5 2 50
+    336 sq25 G5 2 50
+    340 sq25 F5 4 50
+    344 sq25 G5 4 50
+    348 sq25 A5 4 50
+    352 sq25 E5 4 50
+    360 sq25 G5 4 50
+    368 sq25 G5 4 50
+    372 sq25 F5 4 50
+    376 sq25 E5 4 50
+    380 sq25 F5 4 50
+end
+
+pattern bass resolution 1
+    00 bass C4  8 50
+    08 bass A3  4 50
+    12 bass G#3 4 50
+    16 bass G3  4 50
+    20 bass C4  4 50
+    24 bass A3  4 50
+    28 bass D4  2 50
+    30 bass C4  2 50
+end
+
+pattern bambambam resolution 4
+    04 sq50 F4  1 50
+    08 sq50 G4  1 50
+    12 sq50 F4  1 50
+
+    20 sq50 F4  1 50
+    24 sq50 G4  1 50
+    28 sq50 F4  1 50
+
+    36 sq50 F4  1 50
+    40 sq50 G4  1 50
+    44 sq50 F4  1 50
+
+    52 sq50 F4  1 50
+    56 sq50 G4  1 50
+    60 sq50 F4  1 50
+end
+
+pattern outro resolution 4
+    00 sq12 C6  1 50
+    04 sq12 F5  1 50
+    08 sq12 G5  1 50
+    12 sq12 F5  1 50
+
+    16 sq12 B4  1 50
+    20 sq12 F5  1 50
+    24 sq12 G5  1 50
+    28 sq12 F5  1 50
+
+    32 sq12 A#4 1 50
+    36 sq12 F5  1 50
+    40 sq12 G5  1 50
+    44 sq12 A#5 1 50
+
+    48 sq12 A5  1 50
+    52 sq12 G5  1 50
+    56 sq12 F5  1 50
+    60 sq12 C5  1 50
+end
+
+pattern outro_bass resolution 1
+    00 bass F5  4 30
+    04 bass G5  4 30
+    08 bass A#4 4 30
+    12 bass F5  4 30
+
+    00 bass F4  4 20
+    04 bass G4  4 20
+    08 bass A#3 4 20
+    12 bass F4  4 20
+end
+
+pattern drums resolution 1
+    00 noise C5  1 50
+    01 noise E7  1 50
+    02 noise D6  1 50
+
+    04 noise C5  1 50
+    05 noise E7  1 50
+    06 noise D6  1 50
+    
+    08 noise C5  1 50
+    09 noise E7  1 50
+    10 noise D6  1 50
+
+    12 noise C5  1 50
+    13 noise E7  1 50
+    14 noise D6  1 50
+end
+
+pattern drums_outro resolution 2
+    00 noise C4  1 50
+    02 noise D6  1 40
+    07 noise C4  1 30
+
+    08 noise C4  1 50
+    10 noise D6  1 30
+    12 noise C5  1 50
+end
+
+pattern main resolution 1
+    00  @intro
+    32  @intro
+    00  @intro_bass
+    32  @intro_bass
+
+    32  @melody
+    64  @bambambam
+    80  @bambambam
+    96  @bambambam
+    112 @bambambam
+    64  @bass
+    96  @bass
+    64  @drums
+    80  @drums
+    96  @drums
+    112 @drums
+
+    128 @outro
+    144 @outro
+    128 @outro_bass
+    144 @outro_bass
+    128 @drums_outro
+    136 @drums_outro
+    144 @drums_outro
+    152 @drums_outro
+
+    160 @outro
+    176 @outro
+end

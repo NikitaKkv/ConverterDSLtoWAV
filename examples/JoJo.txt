@@ -1,0 +1,49 @@
+bpm 68
+
+instrument piano sampler
+    sample=./samples/piano.wav
+    root=C4
+    attack=0.02
+    release=0.5
+end
+
+pattern melody resolution 8
+    00 piano F#5 4 70
+    04 piano D5 2 65
+    06 piano D5 2 65
+    08 piano E5 4 70
+    12 piano F5 2 65
+    14 piano E5 2 65
+    16 piano D5 4 70
+    20 piano C#5 2 65
+    22 piano D5 2 65
+    24 piano E5 4 70
+    28 piano B5 8 75
+    
+    36 piano F#5 4 70
+    40 piano B4 4 70
+    44 piano C#5 4 70
+    48 piano D5 4 70
+    52 piano E5 4 70
+    56 piano D5 4 70
+    60 piano C#5 4 70
+    64 piano A5 4 70
+    68 piano G4 6 70
+    
+    76 piano F#5 4 70
+    80 piano D5 2 65
+    82 piano D5 2 65
+    84 piano E5 4 70
+    88 piano F5 2 65
+    90 piano E5 2 65
+    92 piano D5 4 70
+    96 piano C#5 2 65
+    98 piano D5 2 65
+    100 piano E5 4 70
+    104 piano B5 8 75
+end
+
+pattern main resolution 8
+    00 @melody
+    112 @melody
+end

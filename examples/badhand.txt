@@ -1,0 +1,455 @@
+#
+#   .----.--.-.
+#   |3   |  | |    Music:       Bad Hand
+#   |    |  | |    Composer:    Thelonious Dogg
+#   |   3| 7|A|
+#   '----'--'-'
+#
+
+bpm 92
+
+instrument kick sampler
+    sample=./samples/perc1.wav
+    release=0.01
+    root=C5
+    effect gain gain=0.5
+end
+
+instrument hh sampler
+    sample=./samples/hihc.wav
+    release=0.01
+    root=C5
+    effect gain gain=0.5
+end
+
+instrument snare sampler
+    sample=./samples/snare.wav
+    root=C5
+    effect gain gain=0.5
+end
+
+instrument crash sampler
+    sample=./samples/crash.wav
+    loop=6251,12556
+    release=0.25
+    root=C5
+    effect echo delay=0.2 decay=0.4
+    effect gain gain=0.5
+end
+
+instrument fbass sampler
+    sample=./samples/fbass.wav
+    loop=4839,5844
+    root=C4
+    effect gain gain=0.5
+end
+
+instrument piano sampler
+    sample=./samples/pianom.wav
+    attack=0.001
+    release=0.1
+    root=C5
+end
+
+instrument pbass sampler
+    sample=./samples/jazzgt.wav
+    release=0.1
+    root=C5
+    effect gain gain=0.8
+end
+
+instrument trumpet sampler
+    sample=./samples/trumpet.wav
+    loop=7902,8070
+    root=C5
+    release=0.1
+    effect echo delay=0.2 decay=0.2
+    effect gain gain=0.5
+end
+
+instrument sax_back sampler
+    sample=./samples/sax.wav
+    root=C5
+    loop=8893,9229
+    attack=0.001
+    release=0.1
+    effect echo delay=0.2 decay=0.2
+    effect gain gain=0.5
+end
+
+instrument sax sampler
+    sample=./samples/sax.wav
+    root=C5
+    loop=8893,9229
+    attack=0.001
+    release=0.1
+    effect echo delay=0.2 decay=0.2
+    effect gain gain=0.5
+end
+
+pattern drums resolution 8
+    00 kick G4 1 50
+    03 kick G4 1 50
+    15 kick G4 1 50
+    16 kick G4 1 50
+    19 kick G4 1 50
+    31 kick G4 1 50
+    32 kick G4 1 50
+    35 kick G4 1 50
+    47 kick G4 1 50
+    48 kick G4 1 50
+    56 kick G4 1 50
+
+    00 hh B5 1 50
+    04 hh B5 1 50
+    12 hh B5 1 50
+    16 hh B5 1 50
+    20 hh B5 1 50
+    28 hh B5 1 50
+    32 hh B5 1 50
+    36 hh B5 1 50
+    44 hh B5 1 50
+    48 hh B5 1 50
+    52 hh B5 1 50
+    56 hh B5 1 50
+    60 hh B5 1 50
+
+    08 snare B5 1 50
+    24 snare B5 1 50
+    40 snare B5 1 50
+end
+
+pattern bass resolution 8
+    00 fbass G2 14 50
+    14 fbass G2 2  50
+    16 fbass A2 14 50
+    30 fbass A2 2  50
+    32 fbass B2 16 50
+    48 fbass G2 8  50
+    56 fbass G2 8  50
+end
+
+pattern drumsbass resolution 1
+    0 @drums
+    0 @bass
+end
+
+pattern sax_back resolution 16
+    102  sax_back E4   3  50
+    104  sax_back G4   3  50
+    110  sax_back E4   3  50
+    112  sax_back G4   3  50
+    118  sax_back E4   3  50
+    120  sax_back G4   3  50
+    125  sax_back E4   3  50
+
+    230  sax_back D#4   3  50
+    232  sax_back F#4   3  50
+    238  sax_back D#4   3  50
+    240  sax_back F#4   3  50
+    246  sax_back D#4   3  50
+    248  sax_back F#4   3  50
+    253  sax_back D#4   3  50
+
+    360  sax_back D4   8  50
+    368  sax_back B3   8  50
+    376  sax_back A3   8  50
+
+    456  sax_back A#3  8  50
+    464  sax_back A3   8  50
+    472  sax_back G3   4  50
+    476  sax_back E3   28 50
+end
+
+pattern trumpet resolution 16
+    00 @sax_back
+
+    0   trumpet E5   8   50
+    8   trumpet G5   6   50
+    14  trumpet A5   4   50
+    22  trumpet A5   4   50
+    30  trumpet G5   2   50
+    32  trumpet A5   2   50
+    40  trumpet G5   4   50
+    46  trumpet G#5  2   50
+    48  trumpet A5   8   50
+    56  trumpet G5   4   50
+    64  trumpet A#5  8   50
+    72  trumpet A5   4   50
+    80  trumpet G5   4   50
+    88  trumpet A5   2   50
+    92  trumpet G5   28  50
+
+    126 trumpet A#5  2   50
+    128 trumpet B5   8   50
+    136 trumpet A5   2   50
+    144 trumpet G5   8   50
+    152 trumpet E5   4   50
+
+    156 trumpet B5   12  50
+    168 trumpet A5   4   50
+    176 trumpet G5   8   50
+    184 trumpet E5   4   50
+
+    192 trumpet D#5  16  50
+    208 trumpet C5   8   50
+    220 trumpet B4   16  50
+
+    256 trumpet B5   16  50
+    272 trumpet D#6  12  50
+    284 trumpet E6   6   50
+    294 trumpet A#5  2   50
+    296 trumpet B5   4   50
+    304 trumpet A5   6   50
+    312 trumpet G5   2   50
+    316 trumpet A5   34  50
+    352 trumpet B5   16  50
+
+    383 trumpet D#6  1   50
+
+    384 trumpet E6   5   50
+    389 trumpet D6   3   50
+    392 trumpet B5   5   50
+    397 trumpet A5   2   50
+
+    400 trumpet D#6  5   50
+    405 trumpet D6   3   50
+    408 trumpet B5   4   50
+    412 trumpet A#5  8   50
+
+    423 trumpet A5   1   50
+    424 trumpet A#5  6   50
+    432 trumpet A#5  6   50
+    440 trumpet G5   4   50
+    444 trumpet E5   36  50
+end
+
+pattern guitar resolution 8
+    00 pbass G5 4 50
+    08 pbass A5 4 50
+    14 pbass B5 5 50
+    20 pbass A5 3 50
+    24 pbass G5 3 50
+    28 pbass F#5 3 50
+
+    32 pbass B4 7 50
+    40 pbass G5 6 50
+    46 pbass E5 6 50
+
+    64 pbass G5 3 50
+    68 pbass A5 3 50
+    72 pbass B5 3 50
+    76 pbass A5 1 50
+    78 pbass G5 5 50
+    84 pbass A5 3 50
+    88 pbass B5 3 50
+    92 pbass A5 3 50
+
+    96 pbass G5 7 50
+    104 pbass F#5 5 50
+    110 pbass E5 5 50
+    116 pbass F#4 4 50
+    120 pbass A4 4 50
+    124 pbass B4 4 50
+
+    128 pbass D5 14 50
+    142 pbass E5 3 50
+    147 pbass D5 1 50
+    148 pbass E5 3 50
+    152 pbass D5 2 50
+    156 pbass B4 2 50
+
+    160 pbass A4 15 50
+    176 pbass B4 15 50
+
+    192 pbass F#4 2 50
+    196 pbass F#4 2 50
+    200 pbass G4 2 50
+    204 pbass G4 2 50
+    206 pbass A4 2 50
+    212 pbass E4 2 50
+    216 pbass D4 2 50
+    220 pbass G3 6 50
+    224 pbass F#3 32 50
+end
+
+pattern piano resolution 16
+    0 piano A4 8 50
+    8 piano B4 8 50
+    16 piano A4 8 50
+    24 piano G4 4 50
+    28 piano D#4 12 50
+    40 piano C4 8 50
+    48 piano B3 8 50
+    56 piano G3 8 50
+    64 piano E3 36 50
+    102 piano B6 26 20
+    102 piano D7 26 20
+    102 piano E6 26 20
+    102 piano G6 26 20
+    112 piano D#7 8 50
+    120 piano E7 8 50
+    128 piano B5 8 50
+    136 piano E6 8 50
+    144 piano D6 8 50
+    152 piano G5 4 50
+    156 piano B5 12 50
+    168 piano A5 8 50
+    176 piano B5 8 50
+    184 piano D6 10 50
+    192 piano E6 4 50
+    196 piano D#6 4 50
+    200 piano E6 24 50
+    224 piano A#6 16 20
+    224 piano C6 16 20
+    224 piano E6 16 20
+    224 piano G6 16 20
+    240 piano A#6 16 20
+    240 piano B5 16 20
+    240 piano D#6 16 20
+    240 piano F#6 16 20
+    256 piano B4 40 30
+    256 piano D5 40 30
+    256 piano E4 40 30
+    272 piano A5 14 50
+    284 piano G5 12 50
+    296 piano E4 24 50
+    304 piano A#4 16 30
+    304 piano D5 16 30
+    304 piano G4 16 30
+    312 piano F#5 6 50
+    320 piano A5 30 20
+    320 piano B4 32 20
+    320 piano E5 32 20
+    320 piano G4 32 20
+    320 piano G5 30 20
+    352 piano B4 32 20
+    352 piano D5 32 20
+    352 piano D6 16 20
+    352 piano E4 32 20
+    352 piano G4 32 20
+    384 piano B4 28 20
+    384 piano B5 5 20
+    384 piano D4 28 20
+    384 piano D5 28 20
+    384 piano F#4 16 20
+    389 piano D6 3 50
+    392 piano E6 5 50
+    397 piano G6 3 50
+    400 piano A6 5 50
+    400 piano G4 12 50
+    405 piano G6 3 50
+    408 piano E6 5 50
+    412 piano B4 32 20
+    412 piano D4 26 20
+    412 piano D5 28 20
+    412 piano G4 34 20
+    413 piano D6 8 50
+    422 piano A5 2 50
+    424 piano A#5 6 50
+    432 piano G5 8 50
+    440 piano D#5 6 50
+    446 piano B2 66 20
+    446 piano B3 66 20
+    446 piano B4 66 20
+end
+
+pattern sax resolution 16
+    0 sax A5 8 50
+    8 sax B5 8 50
+    16 sax A5 8 50
+    24 sax G5 4 50
+    28 sax D#5 12 50
+    40 sax C5 8 50
+    48 sax B4 8 50
+    56 sax G4 8 50
+    64 sax E4 36 50
+    102 sax D7 10 50
+    112 sax D#7 8 50
+    120 sax E7 8 50
+    128 sax B5 8 50
+    136 sax E6 8 50
+    144 sax D6 8 50
+    152 sax G5 4 50
+    156 sax B5 12 50
+    168 sax A5 8 50
+    176 sax B5 8 50
+    184 sax D6 8 50
+    192 sax E6 4 50
+    196 sax D#6 4 50
+    200 sax E6 24 50
+    224 sax E6 16 50
+    240 sax D#6 16 50
+    256 sax B5 16 50
+    272 sax A5 12 50
+    284 sax G5 12 50
+    312 sax F#5 6 50
+    320 sax A5 30 50
+    352 sax D6 16 50
+    384 sax B5 5 50
+    389 sax D6 3 50
+    392 sax E6 5 50
+    397 sax G6 3 50
+    400 sax A6 5 50
+    405 sax G6 3 50
+    408 sax E6 5 50
+    413 sax D6 8 50
+    422 sax A5 2 50
+    424 sax A#5 6 50
+    432 sax G5 8 50
+    440 sax D#5 6 50
+    446 sax B4 56 50
+end
+
+pattern crash resolution 4
+    00 crash C5 1 75
+    00 crash G5 1 75
+end
+
+pattern buildup resolution 4
+    02 crash C5 1 10
+    02 crash G5 1 10
+    04 crash C5 1 25
+    04 crash G5 1 25
+    06 crash C5 1 50
+    06 crash G5 1 50
+end
+
+pattern main resolution 1
+    00 @crash
+    00 @drumsbass
+    08 @drumsbass
+    16 @drumsbass
+    24 @drumsbass
+    00 @trumpet
+
+    32 @crash
+    32 @drumsbass
+    40 @drumsbass
+    48 @drumsbass
+    48 @crash
+    56 @drumsbass
+    32 @trumpet
+    32 @guitar
+
+    62 @buildup
+
+    64 @crash
+    64 @drumsbass
+    72 @drumsbass
+    80 @drumsbass
+    88 @drumsbass
+    64 @trumpet
+    64 @piano
+
+    94 @buildup
+
+    96 @crash
+    96 @drumsbass
+    104 @drumsbass
+    112 @drumsbass
+    120 @drumsbass
+    96 @trumpet
+    96 @piano
+    96 @sax
+end

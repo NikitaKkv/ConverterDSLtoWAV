@@ -1,0 +1,27 @@
+#   ___
+#  <__ \
+#    | o|          Lick: The Lick
+#    | o|  ____    Lick: THE Lick
+#    | o| / O /    Lick: THE LICK
+#    \ o\/ O /
+#     \_____/
+
+bpm 120
+
+instrument sax sampler
+    sample=./samples/sax.wav
+    root=C5
+    loop=8893,9229
+    attack=0.001
+    release=0.05
+end
+
+pattern main resolution 8
+    00 sax D5  2 50
+    05 sax E5  2 50
+    08 sax F5  2 50
+    13 sax G5  2 50
+    16 sax E5  4 50
+    23 sax C5  2 50
+    28 sax D5  8 50
+end

@@ -1,0 +1,101 @@
+#
+#   ,d88b.d88b,    
+#   88888888888    Music:       Memory
+#   `Y8888888Y'    Composer:    Toby Fox
+#     `Y888Y'
+#       `Y'
+#
+
+bpm 78
+
+instrument piano sampler
+    sample=./samples/piano.wav
+    root=C5
+    attack=0.001
+    release=0.1
+    effect echo delay=0.19234 decay=0.2
+end
+
+pattern melody resolution 4
+    00 piano E5  2 50
+    02 piano B5  2 50
+    04 piano A5  2 50
+    06 piano E5  2 50
+    08 piano G#5 2 50
+    10 piano E5  1 50
+    11 piano G#5 2 50
+    14 piano A5  2 50
+
+    18 piano E5  2 50
+    20 piano A5  2 50
+    22 piano E5  2 50
+    24 piano G#5 2 50
+    26 piano E5  1 50
+    27 piano G#5 2 50
+    30 piano A5  2 50
+
+    32 piano E5  2 50
+    34 piano B5  2 50
+    36 piano A5  2 50
+    38 piano E5  2 50
+    40 piano G#5 2 50
+    42 piano E5  1 50
+    43 piano G#5 2 50
+    46 piano A5  2 50
+
+    50 piano E5  2 50
+    52 piano A5  2 50
+    54 piano C#6 2 50
+    56 piano B5  2 50
+    59 piano A5  2 50
+    62 piano B5  2 50
+end
+
+pattern bassline1 resolution 2
+    01 piano D4 1 50
+    03 piano D4 1 50
+    05 piano D4 1 50
+    07 piano D4 1 50
+    09 piano D4 1 50
+    11 piano D4 1 50
+    13 piano D4 1 50
+    15 piano D4 1 50
+    17 piano D4 1 50
+    19 piano D4 1 50
+    21 piano D4 1 50
+    23 piano D4 1 50
+    25 piano D4 1 50
+    27 piano D4 1 50
+    29 piano D4 1 50
+    31 piano D4 1 50
+end
+
+pattern bassline2 resolution 2
+    01 piano C#4 1 50
+    03 piano C#4 1 50
+    05 piano C#4 1 50
+    07 piano C#4 1 50
+    09 piano C#4 1 50
+    11 piano C#4 1 50
+    13 piano C#4 1 50
+    15 piano C#4 1 50
+    17 piano C#4 1 50
+    19 piano C#4 1 50
+    21 piano C#4 1 50
+    23 piano C#4 1 50
+    25 piano F#4 1 50
+    27 piano F#4 1 50
+    29 piano F#4 1 50
+    31 piano F#4 1 50
+end
+
+pattern main resolution 1
+    00 @melody
+    00 @bassline1
+    16 @melody
+    16 @bassline2
+    32 @melody
+    32 @bassline1
+    48 @melody
+    48 @bassline2
+end

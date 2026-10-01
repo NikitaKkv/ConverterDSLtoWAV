@@ -1,0 +1,29 @@
+# Compiled Object files
+*.o
+*.obj
+*.so
+*.dylib
+*.dll
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+itmoloops
+
+# Audio outputs
+*.wav
+
+# Build directories
+build/
+cmake-build-*/
+.cache/
+compile_commands.json
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*~
